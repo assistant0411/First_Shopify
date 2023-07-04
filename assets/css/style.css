@@ -1,0 +1,299 @@
+html {
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  margin-bottom: 1px;
+}
+.nabvar {
+  background-color: white;
+  width: 100%;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.nab_left {
+  display: flex;
+}
+.nab_right {
+  display: flex;
+  align-items: center;
+}
+.hambogo {
+  margin: auto;
+}
+.nab_ham {
+  width: 24px;
+  height: 4px;
+  background-color: rgb(37, 35, 35);
+  border: none;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.menu {
+  font-size: 10px;
+}
+.logo {
+  margin-left: 20px;
+  border-left: solid 1px rgb(68, 68, 68);
+  padding: 5px;
+}
+.nab_right_img {
+  margin-right: 20px;
+}
+.nab_num {
+  color: blue;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/*----------------------------------------------------------------------*/
+.mybody {
+  width: 100%;
+  background-color: rgb(216, 214, 214);
+  display: flex;
+}
+.myfunction {
+  background-color: rgb(216, 214, 214);
+  min-width: 528px;
+  min-height: 400px;
+  padding: 1.375rem;
+  margin-bottom: 5rem;
+  flex-basis: 34%;
+}
+.myfunction_main {
+  background-color: white;
+  height: 100%;
+}
+.function_body {
+  /* padding: 30px 25px; */
+  height: 100%;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  padding-top: 32px;
+  background-color: #4a4a4a;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #4a4a4a;
+  color: rgb(199, 198, 198);
+  padding: 4px 3px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 12px;
+}
+.tablinks svg {
+  fill: #dbd7d7;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  /* background-color: #ddd; */
+  color: white;
+}
+
+.tab button:hover svg {
+  fill: rgb(255, 255, 255);
+}
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: white;
+  color: black;
+  border-left: solid 3px red;
+  border-right: solid 1px rgb(192, 189, 189);
+}
+.tab button.active svg {
+  fill: rgb(53, 52, 52);
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  /* border: 1px solid #ccc; */
+  width: 100%;
+  border-left: none;
+  height: 300px;
+}
+.icon_upload {
+  width: 45px;
+  height: 45px;
+}
+.upload_title {
+  font-weight: 600;
+  line-height: 22px;
+  font-size: 1rem;
+  color: #444;
+}
+.ndx-UploadFile-fileDetails-list-table {
+  display: flex;
+  /* background-color: #444;
+  padding: 2px; */
+  /* width: 50%; */
+}
+.ndx-UploadFile-fileDetails-section-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #444;
+}
+.ndx-UploadFile-fileDetails p {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #444;
+  margin-top: 20px;
+}
+.ndx-UploadFile-fileDetails-list-table-file {
+  /* border: solid 1px #444; */
+  border: solid 2px #e1e1e1;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: white;
+  /* margin: 0 2px; */
+  width: 40px;
+  text-align: center;
+}
+.funtion_heder {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(238, 235, 235);
+  height: 32px;
+  align-items: center;
+  padding: 0 10px;
+}
+.previous,
+.funtion_close {
+  border: none;
+  background: none;
+  font-size: 25px;
+}
+.funtion_title {
+  font-size: 0.694rem;
+}
+.function_body_real {
+  padding: 12px 12px;
+}
+.upload_file {
+  border: dashed 1px #444;
+  padding: 16px 0 48px;
+  margin: 0 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.addtext_input input {
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  font-stretch: inherit;
+  font-family: inherit;
+  font-optical-sizing: inherit;
+  font-kerning: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  letter-spacing: inherit;
+  color: currentcolor;
+  border: 0px;
+  box-sizing: content-box;
+  background: none;
+  height: auto;
+  margin: 0px;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0px;
+  width: 100%;
+  animation-name: mui-auto-fill-cancel;
+  animation-duration: 10ms;
+  resize: none;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.addtext_btn_design {
+  width: 15rem;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  min-width: 64px;
+  border-radius: 6px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: rgb(255, 255, 255);
+  background-color: rgb(30, 57, 210);
+  box-shadow: none;
+  font-family: "Sharp Sans", Helvetica, Arial, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  padding: 14px 16px;
+  text-transform: none;
+  height: 48px;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 20px;
+}

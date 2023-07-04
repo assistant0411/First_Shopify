@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="mycontainer">
+      <div class="nabvar">
+        <div class="nab_left">
+          <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
+            >
+            <div class="overlay-content">
+              <a href="#">About</a>
+              <a href="#">Services</a>
+              <a href="#">Clients</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+          <div class="hambogo" onclick="openNav()">
+            <div class="nab_ham"></div>
+            <div class="nab_ham"></div>
+            <div class="nab_ham"></div>
+            <p class="menu">Menu</p>
+          </div>
+
+          <div class="logo">
+            <img
+              src="./assets/img/logo.png"
+              style="width: 100px; height: 42px; margin-left: 30px"
+              alt="logo"
+            />
+          </div>
+        </div>
+        <div class="nab_right">
+          <div class="nab_right_img">
+            <img
+              src="./assets/img/nab_listen.png"
+              style="width: 35px; height: 30px"
+              alt="logo_listen"
+            />
+          </div>
+
+          <div>
+            <p>TALK TO A REAL PERSON</p>
+            <p class="nab_num">855-563-7465</p>
+          </div>
+        </div>
+      </div>
+      <div class="mymain">
+        <div class="mybody">
+          <div class="myfunction">
+            <div class="myfunction_main">
+              <div class="tab">
+                <button
+                  class="tablinks"
+                  onclick="openFunction(event, 'Upload')"
+                  id="defaultOpen"
+                >
+                  <svg
+                    id="_11-upload"
+                    data-name="11-upload"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 38.98 38.98"
+                    class="icon_upload"
+                  >
+                    <path class="cls-1" d="M19.38 24.81h.22l-.11-.1Z"></path>
+                    <path
+                      class="cls-1"
+                      d="M27.91 15.91h-.35v-.53a6.39 6.39 0 0 0-12.22-2.61 3.81 3.81 0 0 0-5.3 2.78 4.71 4.71 0 0 0 1.26 9.24h3.75l.06-.08L18 21.94a2.08 2.08 0 0 1 2.89 0l2.9 2.79.06.08h4a4.45 4.45 0 0 0 .06-8.9Z"
+                    ></path>
+                    <path
+                      class="cls-1"
+                      d="M22.79 25.81 19.9 23a.58.58 0 0 0-.81 0l-2.9 2.79a.58.58 0 0 0 .41 1h1.47V30h2.86v-3.18h1.47a.58.58 0 0 0 .39-1.01Z"
+                    ></path>
+                  </svg>
+                  <p>Upload</p>
+                </button>
+                <button
+                  class="tablinks"
+                  onclick="openFunction(event, 'AddText')"
+                >
+                  <svg
+                    id="_13-add-text"
+                    data-name="13-add-text"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 38.98 38.98"
+                    class="icon_upload"
+                  >
+                    <path
+                      class="cls-1"
+                      d="M14.77 29.05v-2.54h3v-14h-3.82v4.08h-2.77V9.93H27.8v6.62H25v-4.08h-3.79v14h3v2.54h-9.44Z"
+                    ></path>
+                  </svg>
+                  <p>Add Text</p>
+                </button>
+                <button
+                  class="tablinks"
+                  onclick="openFunction(event, 'AddArt')"
+                >
+                  <svg
+                    id="_08-add-art"
+                    data-name="08-add-art"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 38.98 38.98"
+                    class="icon_upload"
+                  >
+                    <circle
+                      class="cls-1"
+                      cx="23.47"
+                      cy="15.5"
+                      r="1.32"
+                    ></circle>
+                    <path
+                      class="cls-1"
+                      d="M28.58 9.86H10.4a.54.54 0 0 0-.54.54v18.18a.54.54 0 0 0 .54.54h18.18a.54.54 0 0 0 .54-.54V10.4a.54.54 0 0 0-.54-.54Zm-1.46 13-2.25-2.25a1 1 0 0 0-1.44 0l-1.67 1.67-4.43-4.43a1 1 0 0 0-1.44 0l-4 4V12a.18.18 0 0 1 .11-.14h14.9a.18.18 0 0 1 .18.18v10.82Z"
+                    ></path>
+                  </svg>
+                  <p>Add Art</p>
+                </button>
+                <button
+                  class="tablinks"
+                  onclick="openFunction(event, 'ProductColor')"
+                >
+                  <svg
+                    id="_10-product-color"
+                    data-name="10-product-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 38.98 38.98"
+                    class="icon_upload"
+                  >
+                    <path
+                      class="cls-1"
+                      d="M25.66 18.83v-.06l-5.31-9a1 1 0 0 0-1.65 0l-5.31 9v.06a7.32 7.32 0 0 0-1 3.62 7.13 7.13 0 1 0 14.26 0 7.32 7.32 0 0 0-.99-3.62Zm-6.17 9a5.19 5.19 0 0 1-5-3.88.75.75 0 1 1 1.45-.38 3.69 3.69 0 0 0 3.57 2.76.75.75 0 0 1-.02 1.46ZM19.49 29.69z"
+                    ></path>
+                  </svg>
+                  <p>Product Color</p>
+                </button>
+                <button
+                  class="tablinks"
+                  onclick="openFunction(event, 'AddName')"
+                >
+                  <svg
+                    id="_09-names-num"
+                    data-name="09-names-num"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 38.98 38.98"
+                    class="icon_upload"
+                  >
+                    <path
+                      class="cls-1"
+                      d="m11.68 11.41-.08-.09v-.62l.13-.13h.85l.13.12v.42h.82v-.7l-.52-.53h-1.7l-.54.55v1.21l.47.48h1.39l.08.08v.66l-.13.13h-.87l-.13-.12v-.42h-.83v.7l.53.52H13l.54-.54v-1.25l-.47-.47h-1.39zM16.28 12.67l-.84-2.79h-1.13v3.79h.75v-2.49l.76 2.49h.87l.76-2.5v2.5h.81V9.88h-1.13l-.85 2.79zM19.02 10.54h.62v2.48h-.62v.65h2.07v-.65h-.62v-2.48h.62v-.66h-2.07v.66zM21.86 10.6h.99v3.07h.83V10.6h.99v-.72h-2.81v.72zM27.4 9.88v1.54h-1.13V9.88h-.83v3.79h.83v-1.49h1.13v1.49h.83V9.88h-.83zM26.83 29.1h-4.72a.68.68 0 0 1-.48-.2l-1-1a.68.68 0 0 1-.2-.48V16.57a.68.68 0 0 1 .2-.48l1-1a.68.68 0 0 1 .48-.2h4.73a.68.68 0 0 1 .48.2l1 1a.68.68 0 0 1 .2.48v10.85a.68.68 0 0 1-.2.48l-1 1a.68.68 0 0 1-.49.2Zm-3.12-2.79h1.51a.5.5 0 0 0 .5-.5v-7.63a.5.5 0 0 0-.5-.5h-1.5a.5.5 0 0 0-.5.5v7.63a.5.5 0 0 0 .5.5ZM16.88 29.1h-4.73a.68.68 0 0 1-.48-.2l-1-1a.68.68 0 0 1-.2-.48V16.57a.68.68 0 0 1 .2-.48l1-1a.68.68 0 0 1 .48-.2h4.73a.68.68 0 0 1 .48.2l1 1a.68.68 0 0 1 .2.48v10.85a.68.68 0 0 1-.2.48l-1 1a.68.68 0 0 1-.48.2Zm-3.12-2.79h1.51a.5.5 0 0 0 .5-.5v-7.63a.5.5 0 0 0-.5-.5h-1.51a.5.5 0 0 0-.5.5v7.63a.5.5 0 0 0 .5.5Z"
+                    ></path>
+                  </svg>
+                  <p>Add Names</p>
+                </button>
+                <button
+                  class="tablinks"
+                  onclick="openFunction(event, 'AddNote')"
+                >
+                  <svg
+                    id="_21-notes_copy"
+                    data-name="21-notes copy"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 38.98 38.98"
+                    class="icon_upload"
+                  >
+                    <path
+                      class="cls-1"
+                      d="M22.92 9.64v2.8h4.04l-4.04-2.8z"
+                    ></path>
+                    <path
+                      class="cls-1"
+                      d="M28 29.34H11V9.64h10.29v4H28v15.7Zm-15-2h13v-11.7h-6.71v-4H13v15.7Z"
+                    ></path>
+                    <path
+                      class="cls-1"
+                      d="M14.15 23.99H22v1.35h-7.85zM14.15 20.77h11.26v1.35H14.15zM14.15 17.54h11.26v1.35H14.15z"
+                    ></path>
+                  </svg>
+                  <p>Add Notes</p>
+                </button>
+              </div>
+              <div class="function_body" style="overflow-y: scroll">
+                <div id="Upload" class="tabcontent">
+                  <div class="funtion_heder">
+                    <button class="previous"><</button>
+                    <p class="funtion_title">Choose File To Upload</p>
+                    <button class="funtion_close">×</button>
+                  </div>
+                  <div class="function_body_real">
+                    <div class="upload_title">
+                      The higher the resolution, the better the upload will look
+                      on your gear.
+                    </div>
+                    <div class="upload_body">
+                      <div class="ndx-UploadFile-fileDetails">
+                        <span class="ndx-UploadFile-fileDetails-section-title"
+                          >Preferred File Types (max size: 5 MB)</span
+                        >
+                        <p class="ndx-UploadFile-fileDetails-section-content">
+                          For <strong>graphics</strong>, these file types look
+                          amazing when printed:
+                        </p>
+                        <div class="ndx-UploadFile-fileDetails-list">
+                          <div class="ndx-UploadFile-fileDetails-list-table">
+                            <div
+                              class="ndx-UploadFile-fileDetails-list-table-file"
+                            >
+                              .PDF
+                            </div>
+                            <div
+                              class="ndx-UploadFile-fileDetails-list-table-file"
+                            >
+                              .AI
+                            </div>
+                            <div
+                              class="ndx-UploadFile-fileDetails-list-table-file"
+                            >
+                              .EPS
+                            </div>
+                          </div>
+                        </div>
+                        <p class="ndx-UploadFile-fileDetails-section-content">
+                          For <strong>photos</strong>, we recommend these file
+                          types:
+                        </p>
+                        <div class="ndx-UploadFile-fileDetails-list">
+                          <div class="ndx-UploadFile-fileDetails-list-table">
+                            <div
+                              class="ndx-UploadFile-fileDetails-list-table-file"
+                            >
+                              .JPG
+                            </div>
+                            <div
+                              class="ndx-UploadFile-fileDetails-list-table-file"
+                            >
+                              .PNG
+                            </div>
+                          </div>
+                        </div>
+                        <p class="ndx-UploadFile-fileDetails-section-content">
+                          We also accept <strong>.JPEG</strong> and
+                          <strong>.PSD</strong> files.
+                        </p>
+                      </div>
+                      <div class="upload_file">
+                        <div class="upload_file_cloud">
+                          <span>
+                            <svg
+                              id="_11-upload"
+                              data-name="11-upload"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 38.98 38.98"
+                              class="icon_upload"
+                            >
+                              <path
+                                class="cls-1"
+                                d="M19.38 24.81h.22l-.11-.1Z"
+                              ></path>
+                              <path
+                                class="cls-1"
+                                d="M27.91 15.91h-.35v-.53a6.39 6.39 0 0 0-12.22-2.61 3.81 3.81 0 0 0-5.3 2.78 4.71 4.71 0 0 0 1.26 9.24h3.75l.06-.08L18 21.94a2.08 2.08 0 0 1 2.89 0l2.9 2.79.06.08h4a4.45 4.45 0 0 0 .06-8.9Z"
+                              ></path>
+                              <path
+                                class="cls-1"
+                                d="M22.79 25.81 19.9 23a.58.58 0 0 0-.81 0l-2.9 2.79a.58.58 0 0 0 .41 1h1.47V30h2.86v-3.18h1.47a.58.58 0 0 0 .39-1.01Z"
+                              ></path>
+                            </svg>
+                          </span>
+                        </div>
+                        <div class="uploadfile_text">
+                          <div>Drag & Drop or</div>
+                          <div>Browse Your Computer</div>
+                        </div>
+                      </div>
+                      <div class="upload_end">
+                        <div>Do you have a file type not listed above?</div>
+                        <div>
+                          Email it to us or upload it and we’ll review it and
+                          have someone reach out to you before we produce your
+                          order!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="AddText" class="tabcontent">
+                  <div class="funtion_heder">
+                    <button class="previous"><</button>
+                    <p class="funtion_title">Choose File To Upload</p>
+                    <button class="funtion_close">×</button>
+                  </div>
+                  <div class="function_body_real">
+                    <div class="addtext_input">
+                      <input type="text" placeholder="Enter Text Here" />
+                    </div>
+                    <div class="addtext_btn">
+                      <button class="addtext_btn_design">Add To Design</button>
+                    </div>
+                  </div>
+                  <div id="AddArt" class="tabcontent"></div>
+                </div>
+                <div id="ProductColor" class="tabcontent">
+                  <h3>Productcolor</h3>
+                  <p>Tokyo is the capital of Japan.</p>
+                </div>
+                <div id="AddName" class="tabcontent">
+                  <h3>Add|Name</h3>
+                  <p>Tokyo is the capital of Japan.</p>
+                </div>
+                <div id="AddNote" class="tabcontent">
+                  <h3>AddNote</h3>
+                  <p>Tokyo is the capital of Japan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $(".dropdown-toggle").dropdown();
+      });
+      function openNav() {
+        document.getElementById("myNav").style.width = "40%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+      function openFunction(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>

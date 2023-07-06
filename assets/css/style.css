@@ -10,6 +10,7 @@ body {
 
 p {
   margin-bottom: 1px;
+  margin-top: 1px;
 }
 .nabvar {
   background-color: white;
@@ -111,7 +112,7 @@ p {
 }
 .myfunction_main {
   background-color: white;
-  height: 100%;
+  height: 472px;
 }
 .function_body {
   overflow-y: scroll;
@@ -168,6 +169,11 @@ p {
   width: 100%;
   border-left: none;
   height: 300px;
+  display: none;
+}
+.tabcontent_default {
+  position: relative;
+  display: block;
 }
 .icon_upload {
   width: 45px;
@@ -214,7 +220,6 @@ p {
   height: 32px;
   align-items: center;
   padding: 0 10px;
-  position: fixed;
   position: absolute;
   width: 387px;
 }
@@ -267,6 +272,7 @@ p {
   padding: 10px 12px;
   font-size: 14px;
   line-height: 20px;
+  text-align: center;
 }
 .addtext_btn_design {
   width: 15rem;
@@ -304,7 +310,9 @@ p {
   line-height: 22px;
   margin-top: 20px;
 }
-
+.addart_icons {
+  position: relative;
+}
 .ndx-ArtCategoryList-item--root-label {
   z-index: 2;
   display: flex;
@@ -360,4 +368,129 @@ p {
   width: 100%;
   border-radius: 8px;
   cursor: pointer;
+}
+.first_txt {
+  padding-top: 48px;
+  text-align: center;
+}
+.ndx-Welcome_Lg,
+.ndx-Flex-Row {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row;
+}
+.ndx-Welcome_Lg-button {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.ndx-Welcome_Lg-button:hover > .ndx-Welcome_Lg-buttonText {
+  color: blue;
+}
+.ndx-Welcome_Lg-buttonImage.welcomeUploadCTAImage {
+  background-image: url(../img/LbpWelcomeUpload-81ac6ab69d00d6865d52..svg);
+}
+.ndx-Welcome_Lg-buttonImage {
+  flex: 0 0 auto;
+  margin-left: 0;
+  height: 4.5rem;
+  width: 6.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10rem 10rem;
+}
+.ndx-Welcome_Lg-buttonImage.welcomeTextCTAImage {
+  background-image: url(../img/LbpWelcomeAddText-024cf14a3277401ac491..svg);
+}
+.ndx-Welcome_Lg-buttonImage.welcomeArtCTAImage {
+  background-image: url(../img/LbpWelcomeExploreArt-c2ec2de6987db9961444..svg);
+}
+.ndx-Welcome_Lg-buttonImage.welcomeProductCTAImage {
+  background-image: url(../img/LbpWelcomeBrowseProducts-08875dbb39a8035e1e0b..svg);
+}
+.ndx-Welcome_Lg-floatingLinkWrapper {
+  text-align: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+.ndx-Welcome_Lg-floatingLink {
+  color: #1f51cf;
+  cursor: pointer;
+}
+.ndx-Product {
+  height: 100%;
+  width: 100%;
+}
+h5 {
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+.watch-overlay {
+  top: 0px;
+  left: -42.84px;
+  height: 589px;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+}
+.ndx-Product-photo {
+  top: 0px;
+  left: -42.84px;
+  height: 589px;
+  visibility: visible;
+}
+.ndx-Guideline {
+  left: 79.6454px;
+  top: 99.9481px;
+  width: 254.8px;
+  height: 333.2px;
+  color: rgb(158, 148, 148);
+  border-color: rgb(158, 148, 148);
+}
+.ndx-Guideline_sec {
+  left: 226.628px;
+  top: 109.747px;
+  width: 98px;
+  height: 98px;
+  color: rgb(158, 148, 148);
+  border-color: rgb(158, 148, 148);
+}
+.dx-Guideline_thr {
+  left: 89.4442px;
+  top: 119.546px;
+  width: 235.2px;
+  height: 274.4px;
+  color: rgb(158, 148, 148);
+  border-color: rgb(158, 148, 148);
+}
+.ndx-SelectionArea {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.ndx-Design-printableArea {
+  left: 79.6454px;
+  top: 99.9481px;
+  width: 254.8px;
+  height: 333.2px;
+  color: rgb(158, 148, 148);
+}
+.mybody_center_shirt_text {
+  /* border: none; */
+  position: relative;
+  top: 25%;
+  left: 50%;
+  text-align: center;
+  /* border: solid 1px rgb(93, 93, 93); */
+}
+
+
+/*-------------------------add text: form hidden-----------*/
+.form-group_hidden{
+  display: none;
 }

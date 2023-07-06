@@ -11,6 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/canvas.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -64,9 +68,13 @@
             <div class="myfunction_main">
               <div class="tab">
                 <button
+                  id="defaultOpen"
+                  class="tablinks"
+                  onclick="(event,'defaultOpen')"
+                ></button>
+                <button
                   class="tablinks"
                   onclick="openFunction(event, 'Upload')"
-                  id="defaultOpen"
                 >
                   <svg
                     id="_11-upload"
@@ -193,11 +201,62 @@
                 </button>
               </div>
               <div class="function_body">
+                <div id="defaultOpen" class="tabcontent tabcontent_default">
+                  <h3 class="first_txt">What's next for you?</h3>
+                  <div class="ndx-Welcome_Lg-buttons">
+                    <div class="ndx-Flex-Row">
+                      <div
+                        class="ndx-Welcome_Lg-button"
+                        onclick="openFunction(event , 'Upload')"
+                      >
+                        <div
+                          class="ndx-Welcome_Lg-buttonImage welcomeUploadCTAImage"
+                        ></div>
+                        <div class="ndx-Welcome_Lg-buttonText">Upload</div>
+                      </div>
+                      <div
+                        class="ndx-Welcome_Lg-button"
+                        onclick="openFunction(event, 'AddText')"
+                      >
+                        <div
+                          class="ndx-Welcome_Lg-buttonImage welcomeTextCTAImage"
+                        ></div>
+                        <div class="ndx-Welcome_Lg-buttonText">Add Text</div>
+                      </div>
+                    </div>
+                    <div class="ndx-Flex-Row">
+                      <div
+                        class="ndx-Welcome_Lg-button"
+                        onclick="openFunction(event, 'AddArt')"
+                      >
+                        <div
+                          class="ndx-Welcome_Lg-buttonImage welcomeArtCTAImage"
+                        ></div>
+                        <div class="ndx-Welcome_Lg-buttonText">Add Art</div>
+                      </div>
+                      <div
+                        class="ndx-Welcome_Lg-button"
+                        onclick="openFunction(event, 'ProductColor')"
+                      >
+                        <div
+                          class="ndx-Welcome_Lg-buttonImage welcomeProductCTAImage"
+                        ></div>
+                        <div class="ndx-Welcome_Lg-buttonText">
+                          Change<br />Products
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ndx-Welcome_Lg-floatingLinkWrapper">
+                    or
+                    <span class="ndx-Welcome_Lg-floatingLink">start over</span>
+                  </div>
+                </div>
                 <div id="Upload" class="tabcontent">
                   <div class="funtion_heder">
                     <button class="previous"><</button>
                     <p class="funtion_title">Choose File To Upload</p>
-                    <button class="funtion_close">×</button>
+                    <button class="funtion_close" onclick="myclose()">×</button>
                   </div>
                   <div class="function_body_real">
                     <div class="upload_title">
@@ -301,22 +360,47 @@
                   <div class="funtion_heder">
                     <button class="previous"><</button>
                     <p class="funtion_title">Choose File To Upload</p>
-                    <button class="funtion_close">×</button>
+                    <button class="funtion_close" onclick="myclose()">×</button>
                   </div>
                   <div class="function_body_real">
-                    <div class="addtext_input">
-                      <input type="text" placeholder="Enter Text Here" />
+                    <div class="addtext_input form-group">
+                      <input
+                        class="DesignInput form-control"
+                        type="text"
+                        placeholder="Enter Text Here"
+                        id="textInput"
+                      />
                     </div>
                     <div class="addtext_btn">
-                      <button class="addtext_btn_design">Add To Design</button>
+                      <button class="addtext_btn_design" id="draw">
+                        Add To Design
+                      </button>
                     </div>
+                    <div class="form-group_hidden">
+                      <label for="selectInput">Choose a text art:</label>
+                      <select class="form-control" id="selectInput">
+                        <option value="normal">normal</option>
+                        <option value="curve">curve</option>
+                        <option value="arch">arch</option>
+                        <option value="bridge">bridge</option>
+                        <option value="valley">valley</option>
+                        <option value="pinch">pinch</option>
+                        <option value="bulge">bulge</option>
+                        <option value="perspective">perspective</option>
+                        <option value="pointed">pointed</option>
+                        <option value="downward">downward</option>
+                        <option value="upward">upward</option>
+                        <option value="cone">cone</option>
+                      </select>
+                    </div>
+                    
                   </div>
                 </div>
                 <div id="AddArt" class="tabcontent">
                   <div class="funtion_heder">
                     <button class="previous"><</button>
-                    <p class="funtion_title">Artwork Categories</p>
-                    <button class="funtion_close">×</button>
+                    <p class="funtion_title">Choose File To Upload</p>
+                    <button class="funtion_close" onclick="myclose()">×</button>
                   </div>
                   <div class="function_body_real">
                     <div class="addtext_input">
@@ -327,8 +411,8 @@
                         class="ndx-ArtCategoryList-row"
                         style="
                           position: absolute;
-                          left: 105px;
-                          top: 180px;
+                          left: -10px;
+                          top: 5px;
                           height: 96px;
                           width: 190px;
                           margin-bottom: 8px;
@@ -358,8 +442,8 @@
                         class="ndx-ArtCategoryList-row"
                         style="
                           position: absolute;
-                          left: 300px;
-                          top: 180px;
+                          left: 185px;
+                          top: 5px;
                           height: 96px;
                           width: 190px;
                           margin-bottom: 8px;
@@ -389,8 +473,8 @@
                         class="ndx-ArtCategoryList-row"
                         style="
                           position: absolute;
-                          left: 105px;
-                          top: 280px;
+                          left: -10px;
+                          top: 105px;
                           height: 96px;
                           width: 190px;
                           margin-bottom: 8px;
@@ -420,8 +504,8 @@
                         class="ndx-ArtCategoryList-row"
                         style="
                           position: absolute;
-                          left: 300px;
-                          top: 280px;
+                          left: 185px;
+                          top: 105px;
                           height: 96px;
                           width: 190px;
                           margin-bottom: 8px;
@@ -451,8 +535,8 @@
                         class="ndx-ArtCategoryList-row"
                         style="
                           position: absolute;
-                          left: 105px;
-                          top: 380px;
+                          left: -10px;
+                          top: 205px;
                           height: 96px;
                           width: 190px;
                           margin-bottom: 8px;
@@ -482,8 +566,8 @@
                         class="ndx-ArtCategoryList-row"
                         style="
                           position: absolute;
-                          left: 300px;
-                          top: 380px;
+                          left: 185px;
+                          top: 205px;
                           height: 96px;
                           width: 190px;
                           margin-bottom: 8px;
@@ -513,8 +597,8 @@
                         class="ndx-ArtCategoryList-row"
                         style="
                           position: absolute;
-                          left: 105px;
-                          top: 480px;
+                          left: -10px;
+                          top: 305px;
                           height: 96px;
                           width: 190px;
                           margin-bottom: 8px;
@@ -544,8 +628,8 @@
                         class="ndx-ArtCategoryList-row"
                         style="
                           position: absolute;
-                          left: 300px;
-                          top: 480px;
+                          left: 185px;
+                          top: 305px;
                           height: 96px;
                           width: 190px;
                           margin-bottom: 8px;
@@ -575,8 +659,8 @@
                         class="ndx-ArtCategoryList-row"
                         style="
                           position: absolute;
-                          left: 105px;
-                          top: 580px;
+                          left: -10px;
+                          top: 405px;
                           height: 96px;
                           width: 190px;
                           margin-bottom: 8px;
@@ -606,8 +690,8 @@
                         class="ndx-ArtCategoryList-row"
                         style="
                           position: absolute;
-                          left: 300px;
-                          top: 580px;
+                          left: 185px;
+                          top: 405px;
                           height: 96px;
                           width: 190px;
                           margin-bottom: 8px;
@@ -637,16 +721,73 @@
                   </div>
                 </div>
                 <div id="ProductColor" class="tabcontent">
-                  <h3>Productcolor</h3>
+                  <div class="funtion_heder">
+                    <button class="previous"><</button>
+                    <p class="funtion_title">Choose File To Upload</p>
+                    <button class="funtion_close" onclick="myclose()">×</button>
+                  </div>
                   <p>Tokyo is the capital of Japan.</p>
                 </div>
                 <div id="AddName" class="tabcontent">
-                  <h3>Add|Name</h3>
+                  <div class="funtion_heder">
+                    <button class="previous"><</button>
+                    <p class="funtion_title">Choose File To Upload</p>
+                    <button class="funtion_close" onclick="myclose()">×</button>
+                  </div>
                   <p>Tokyo is the capital of Japan.</p>
                 </div>
                 <div id="AddNote" class="tabcontent">
-                  <h3>AddNote</h3>
+                  <div class="funtion_heder">
+                    <button class="previous"><</button>
+                    <p class="funtion_title">Choose File To Upload</p>
+                    <button class="funtion_close" onclick="myclose()">×</button>
+                  </div>
                   <p>Tokyo is the capital of Japan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mybody_center">
+            <div class="ndx-Product">
+              <div style="width: 100%; height: 100%; position: absolute">
+                <span style="width: 100%; height: 100%"
+                  ><img class="watch-overlay" /><img
+                    alt="view of product 116200"
+                    draggable="false"
+                    src="./assets/img/front_large_extended.avif"
+                    class="ndx-Product-photo"
+                    height="589"
+                    data-xblocker="passed"
+                /></span>
+              </div>
+              <!-- <div class="mybody_center_shirt_text"></div>/ -->
+
+              <div
+                style="
+                  width: 30%;
+                  /* display: flex; */
+                  align-items: center;
+                  justify-content: center;
+                  margin: 3% 0;
+                  position: relative;
+                "
+              >
+                <canvas id="myCanvas"></canvas>
+              </div>
+
+              <div class="ndxndx-CanvasContainer-pageContainer-Design">
+                <div class="ndx-Guideline">
+                  <h5 class="ndx-guideline-title">Adult</h5>
+                </div>
+                <div class="ndx-Guideline_sec">
+                  <h5 class="ndx-guideline-title">Left Chest</h5>
+                </div>
+                <div class="ndx-Guideline_thr">
+                  <h5 class="ndx-guideline-title">Youth</h5>
+                </div>
+                <div class="ndx-SelectionArea"></div>
+                <div class="ndx-Design-printableArea">
+                  <div class="ndx-Design-centerLine"></div>
                 </div>
               </div>
             </div>
@@ -654,33 +795,5 @@
         </div>
       </div>
     </div>
-    <script>
-      $(document).ready(function () {
-        $(".dropdown-toggle").dropdown();
-      });
-      function openNav() {
-        document.getElementById("myNav").style.width = "40%";
-      }
-
-      function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-      }
-      function openFunction(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-    </script>
   </body>
 </html>

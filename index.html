@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/canvas.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -225,7 +226,7 @@
                     </div>
                     <div class="ndx-Flex-Row">
                       <div
-                        class="ndx-Welcome_Lg-button" 
+                        class="ndx-Welcome_Lg-button"
                         onclick="openFunction(event, 'AddArt')"
                       >
                         <div
@@ -362,16 +363,37 @@
                     <button class="funtion_close" onclick="myclose()">×</button>
                   </div>
                   <div class="function_body_real">
-                    <div class="addtext_input">
+                    <div class="addtext_input form-group">
                       <input
-                        class="DesignInput"
+                        class="DesignInput form-control"
                         type="text"
                         placeholder="Enter Text Here"
+                        id="textInput"
                       />
                     </div>
                     <div class="addtext_btn">
-                      <button class="addtext_btn_design">Add To Design</button>
+                      <button class="addtext_btn_design" id="draw">
+                        Add To Design
+                      </button>
                     </div>
+                    <div class="form-group_hidden">
+                      <label for="selectInput">Choose a text art:</label>
+                      <select class="form-control" id="selectInput">
+                        <option value="normal">normal</option>
+                        <option value="curve">curve</option>
+                        <option value="arch">arch</option>
+                        <option value="bridge">bridge</option>
+                        <option value="valley">valley</option>
+                        <option value="pinch">pinch</option>
+                        <option value="bulge">bulge</option>
+                        <option value="perspective">perspective</option>
+                        <option value="pointed">pointed</option>
+                        <option value="downward">downward</option>
+                        <option value="upward">upward</option>
+                        <option value="cone">cone</option>
+                      </select>
+                    </div>
+                    
                   </div>
                 </div>
                 <div id="AddArt" class="tabcontent">
@@ -738,7 +760,21 @@
                     data-xblocker="passed"
                 /></span>
               </div>
-              <div class="mybody_center_shirt_text"></div>
+              <!-- <div class="mybody_center_shirt_text"></div>/ -->
+
+              <div
+                style="
+                  width: 30%;
+                  /* display: flex; */
+                  align-items: center;
+                  justify-content: center;
+                  margin: 3% 0;
+                  position: relative;
+                "
+              >
+                <canvas id="myCanvas"></canvas>
+              </div>
+
               <div class="ndxndx-CanvasContainer-pageContainer-Design">
                 <div class="ndx-Guideline">
                   <h5 class="ndx-guideline-title">Adult</h5>

@@ -486,4 +486,11 @@ h5 {
   top: 25%;
   left: 50%;
   text-align: center;
+  /* border: solid 1px rgb(93, 93, 93); */
+}
+
+
+/*-------------------------add text: form hidden-----------*/
+.form-group_hidden{
+  display: none;
 }
